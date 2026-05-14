@@ -1,6 +1,6 @@
 stock_producto = 10
-ventas_totales = 0
-recaudacion = 0.0
+vendedores_registrados = []
+montos_ventas = []
 
 while stock_producto > 0:
     vendedor = input("\nIngresá tu nombre: ").strip().title()
@@ -15,8 +15,10 @@ while stock_producto > 0:
         
         elif unidades <= stock_producto:
             stock_producto -= unidades
-            ventas_totales += unidades
-            recaudacion += unidades * 2500.50
+            monto_operacion = unidades * 2500.50
+            
+            vendedores_registrados.append(vendedor)
+            montos_ventas.append(monto_operacion)
             
             print(f"Venta exitosa. Quedan {stock_producto} unidades.")
             
@@ -29,7 +31,7 @@ while stock_producto > 0:
 
 print("\n" + "="*30)
 print(f"RESUMEN DE JORNADA")
-print(f"Vendedor: {vendedor}")
-print(f"Unidades vendidas: {ventas_totales}")
-print(f"Total recaudado: ${recaudacion:.2f}")
+print(f"Vendedores que operaron hoy: {vendedores_registrados}")
+print(f"Unidades totales vendidas: {int(sum(montos_ventas) / 2500.50)}")
+print(f"Total recaudado: ${sum(montos_ventas):.2f}")
 print("="*30)
