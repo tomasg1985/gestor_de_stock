@@ -1,22 +1,62 @@
-# 🛒 Sistema de Gestión de Ventas
+# 🛒 Sistema de Gestión de Ventas e Inventario
 
-Este proyecto es una aplicación de consola desarrollada en **Python** para la administración de inventarios y procesamiento de ventas en tiempo real. La aplicación destaca por su enfoque en la **modularidad**, la **eficiencia algorítmica** y una interfaz de usuario optimizada mediante **feedback visual coloreado**.
+Una aplicación de consola robusta desarrollada en **Python** diseñada para la administración de inventarios y el procesamiento de ventas en tiempo real. Este proyecto destaca por su enfoque en la arquitectura limpia, la optimización algorítmica y una experiencia de usuario (UX) mejorada mediante feedback visual en la terminal.
 
-## 🚀 Características Técnicas
+---
 
-*   **Lógica de Negocio con Guard Clauses**: Implementación de "Cláusulas de Guarda" en la función de procesamiento para validar el stock de forma temprana, mejorando la legibilidad y eliminando bloques `else` innecesarios.
-*   **Procesamiento de Alta Eficiencia**: Uso de la función integrada `sum()` con expresiones de comprensión para el cálculo instantáneo del reporte financiero de la jornada.
-*   **Gestión de Datos Robusta**: Manejo de múltiples valores de retorno mediante **tuplas** y desempaquetado (unpacking) para garantizar la integridad del flujo del programa.
-*   **Interfaz Profesional (UX)**: Integración de la librería **Colorama** para jerarquizar la información (éxitos en cian, errores en rojo, reportes en verde) y validación estricta de entradas de usuario.
-*   **Documentación Técnica**: Implementación de **Docstrings** detallados que describen el propósito, parámetros con tipos de datos (`float`, `int`, `list`) y valores de retorno de cada función.
+### 🚀 Características Destacadas
 
-## 🛠️ Tecnologías Utilizadas
+*   **Validación Temprana (Guard Clauses):** Flujo lógico optimizado mediante cláusulas de guarda en el procesamiento de ventas. Elimina el anidamiento innecesario (`else`), mejorando drásticamente la legibilidad y el mantenimiento del código.
+*   **Procesamiento Eficiente:** Cálculo instantáneo de reportes financieros mediante el uso de la función integrada `sum()` combinada con expresiones de comprensión (*comprehension expressions*).
+*   **Integridad de Datos:** Gestión segura del flujo del programa mediante el uso de tuplas y desempaquetado (*unpacking*) para el manejo de múltiples valores de retorno.
+*   **Experiencia de Usuario Profesional (UX):** Interfaz interactiva por línea de comandos con sanitización estricta de entradas de usuario (`.strip().title()`) e integración de códigos de color para jerarquizar la información (Éxitos en Cian, Errores en Rojo, Reportes en Verde).
+*   **Documentación Rigurosa:** Código completamente documentado utilizando *Docstrings* detallados que especifican el propósito, parámetros tipados (`list`, `int`, `float`) y valores de retorno de cada función.
 
-*   **Python 3.x**
-*   **Colorama**: Estilizado de terminal y mejora de la interacción.
+---
 
-## 📂 Estructura del Código
+### 🛠️ Stack Tecnológico
 
-1.  **`procesar_venta()`**: Motor lógico que encapsula la validación de stock y el cálculo de montos de forma autónoma.
-2.  **`resumen_jornada()`**: Generador de reportes optimizado con formateo financiero (`$:,.2f`) para mayor claridad en grandes cifras.
-3.  **Ciclo Principal**: Interfaz interactiva con sanitización de datos mediante `.strip().title()`.
+*   **Lenguaje:** Python 3.x
+*   **Librerías:** [Colorama](https://pypi.org) (Estilizado y formateo de color en terminal)
+
+---
+
+### 📂 Estructura y Arquitectura del Código
+
+El proyecto está diseñado bajo principios de modularidad y separación de responsabilidades:
+
+
+| Componente | Descripción Técnica |
+| :--- | :--- |
+| `procesar_venta()` | Motor lógico autónomo que encapsula la validación de stock y el cálculo de montos. |
+| `resumen_jornada()` | Generador de reportes optimizado con formateo financiero (`$:,.2f`) para alta precisión en cifras. |
+| **Ciclo Principal** | Orquestador de la interfaz de usuario con sanitización activa de datos de entrada. |
+
+---
+
+### ⚙️ Instalación y Uso
+
+Sigue estos pasos para clonar y ejecutar el sistema localmente en tu terminal:
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com
+   cd gestor_de_stock
+   ```
+
+2. **Instalar las dependencias:**
+   ```bash
+   pip install colorama
+   ```
+
+3. **Ejecutar la aplicación:**
+   ```bash
+   python main.py
+   ```
+   *(Nota: Reemplaza `main.py` por el nombre real de tu archivo principal si es diferente).*
+
+---
+
+### 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consúltala para más detalles.
