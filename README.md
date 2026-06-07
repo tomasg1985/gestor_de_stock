@@ -1,4 +1,4 @@
-# 🛒 Sistema de Gestión de Ventas - TalentoLab
+# 🛒 Sistema de Gestión de Ventas
 
 Este proyecto es una aplicación de consola desarrollada en **Python** para la administración de inventarios y procesamiento de ventas en tiempo real. La aplicación destaca por su enfoque en la **modularidad**, la **eficiencia algorítmica** y una interfaz de usuario optimizada mediante **feedback visual coloreado**.
 
